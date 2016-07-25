@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>    
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/jquery-ui-1.8.24.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/d3/d3.v3.min.js"></script>
+    <script src="~/App/Module.js"></script>
+    <script src="~/App/Services/LineChartService.js"></script>
+    <script src="~/App/Controllers/LineChartsController.js"></script>
+    <script src="~/App/Directives/Directives.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

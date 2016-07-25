@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="content">
+    <h2>Line Chart </h2>
+    <div ng-app="LineCharts">
+        <div ng-controller="LineChartsController" ng-cloak>
+        
+            <div class="search">
+                From : <input type="text" ng-model="from_date" class="datepicker" />
+                To : <input type="text" ng-model="to_date" class="datepicker" />
+            
+                <input type="button" value="Search" ng-click="update()" />
+            </div>
+        
+            <div linear-chart chart-data="salesData"></div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        // datepicker
+        $(document).on("focus", ".datepicker", function () {
+            $(this).datepicker({ dateFormat: 'dd/mm/yy' });
+        });
+    
+    </script>
+}
+    
