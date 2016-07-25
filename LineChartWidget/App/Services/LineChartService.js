@@ -1,4 +1,5 @@
 ﻿app.factory('LineChartService', function ($http) {
+
     var fac = {};
 
     // get all sales
