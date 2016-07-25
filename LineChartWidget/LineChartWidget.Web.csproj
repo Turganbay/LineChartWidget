@@ -137,6 +137,10 @@
     <Content Include="App\Directives\Directives.js" />
     <Content Include="App\Module.js" />
     <Content Include="App\Services\LineChartService.js" />
+    <Content Include="App_Data\LineChartWidget.mdf" />
+    <Content Include="App_Data\LineChartWidget_log.ldf">
+      <DependentUpon>LineChartWidget.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\angular-material\angular-material.css" />
     <Content Include="Content\angular-material\angular-material.min.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -1019,7 +1023,6 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
