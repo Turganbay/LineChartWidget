@@ -15,29 +15,6 @@ namespace LineChartWidget.BLL.Repositories
             db = new LineChartDomain();
         }
 
-        // get all sales
-        public List<DataList> GetSales()
-        {
-            List<DataList> list = new List<DataList>();
-
-            if (db.isOpen())
-            {
-                var reader = db.GetSales();
-                while (reader.Read())
-                {
-                    DataList l = new DataList();
-                    l.product_name = reader["product_name"].ToString();
-                    l.quantity = Convert.ToInt32(reader["quantity"]);
-                    l.sales_date = Convert.ToDateTime(reader["sales_date"]).ToString("MM.dd.yyyy");
-                    list.Add(l);
-                }
-            }
-
-            db.Close();
-
-            return list;
-        }
-
         // get sales by date
         public List<DataList> GetSalesByDate(string from_date, string to_date)
         {

@@ -22,14 +22,7 @@ namespace LineChartWidget.Controllers
             return View();
         }
 
-        // get all sales
-        public JsonResult GetSales()
-        {
-            List<DataList> list = repo.GetSales();
-
-            return Json(list, JsonRequestBehavior.AllowGet);
-        }
-
+      
         // get sales by date
         public JsonResult GetSalesByDate(string from_date, string to_date)
         {

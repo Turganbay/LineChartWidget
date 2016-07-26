@@ -57,20 +57,6 @@ namespace LineChartWidget.DAL.Domain
             }
         }
 
-        // get all sales
-        public SqlDataReader GetSales()
-        {
-            SqlCommand cmd = new SqlCommand("dbo.getSales", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@from_date", "NULL");
-            cmd.Parameters.AddWithValue("@to_date", "NULL");
-            
-            var reader = cmd.ExecuteReader();
-
-            return reader;
-
-        }
-
         // get sales by date
         public SqlDataReader GetSalesByDate(string from_date, string to_date)
         {

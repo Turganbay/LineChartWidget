@@ -2,11 +2,6 @@
 
     var fac = {};
 
-    // get all sales
-    fac.getSales = function (d) {
-        return $http({ url: 'Home/GetSales' });
-    }
-
     // get sales by date
     fac.getSalesByDate = function (from_date, to_date) {
         var response = $http({
